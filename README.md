@@ -19,6 +19,7 @@ Otherwise just make sure you have some external MIDI-module connected to a MIDI-
 After this it should be to just
 
 `git clone https://github.com/claj/jammer.git`
+
 `lein run`
 
 and you can select your MIDI out-port. The program itself shows when it has focus, and the midi-label should twinkle very discretly when it sends MIDI.
