@@ -62,7 +62,6 @@ please note that the midi note numbers always increases +2, and that there's an 
 (def the-midi-port "selects a midi port through a popup window" (atom nil) )
 
 (reset! the-midi-port (midi-out))
-@the-midi-port
 
 (defn setup-frame 
   "initializes a window that maps it's :key-pressed and :key-released events to midi-note on/offs as chosen in the start of the program. the keyboard keys are mapped to the Wichy-Hayden layout. You must have the window focused to be able to use it to send midi (because your OS only sends the keys to the window when it's focused)"
@@ -87,14 +86,14 @@ please note that the midi note numbers always increases +2, and that there's an 
             :key-pressed (fn [e] 
                            (future (config! midi-indicator :background :lightgrey))
                            (if-let [note-number (keycode->midinote (. e getKeyCode))]
-                             (do (println "midi on to  " note-number)
-                                 (midi-note-on @the-midi-port note-number 100))
+                              
+                             (midi-note-on @the-midi-port note-number 100)
                              (println "no midi out")))
             :key-released (fn [e]
                             (future (config! midi-indicator :background "#DDD"))
                             (if-let [note-number (keycode->midinote (. e getKeyCode))]
-                              (do (println "midi off to " note-number)
-                                  (midi-note-off @the-midi-port note-number)) 
+                              
+                              (midi-note-off @the-midi-port note-number) 
                               (println "no midi out"))))
     midi-indicator))
 
@@ -105,8 +104,6 @@ please note that the midi note numbers always increases +2, and that there's an 
     (midi-note-off @the-midi-port 40)))
 
 (comment (test-midi))
-
-@the-midi-port
 
 (comment (setup-frame))
 
