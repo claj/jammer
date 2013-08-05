@@ -14,11 +14,14 @@ This is a Jammer, a clever MIDI-keyboard layout for you computer keyboard. The l
 
 If you want to play a program in your computer, configure a MIDI loop-back device. On Mac OS X this is built in, search your Mac for \"Audio MIDI Setup\", chose Window->Show MIDI window. When in doubt, there's a [youtube movie](http://www.youtube.com/watch?v=hgFA_fdup7g).
 
+Otherwise just make sure you have some external MIDI-module connected to a MIDI-port at your computer. Preferably a nice synth lead with some filtered delay effect on.
+
 After this it should be to just
 
+`git clone https://github.com/claj/jammer.git`
 `lein run`
 
-and you can select your MIDI out-port.
+and you can select your MIDI out-port. The program itself shows when it has focus, and the midi-label should twinkle very discretly when it sends MIDI.
 
 ## References
 
