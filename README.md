@@ -1,6 +1,6 @@
 # jammer
 
-<img src="https://github.com/claj/jammer/blob/master/wicki-hayden-qwerty.png" alt="QWERTY keyboard layout with notes marked according to the Wicky-Hayden layout" title="The Keyboard">
+<img src="https://raw.github.com/claj/jammer/master/wicki-hayden-qwerty.png" alt="QWERTY keyboard layout with notes marked according to the Wicky-Hayden layout" title="The Keyboard" align="right"/>
 
 > "S D S C   S D S C
 > E E F   W W S   D D W F D S D S C"
