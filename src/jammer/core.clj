@@ -100,8 +100,11 @@ please note that the midi note numbers always increases +2, and that there's an 
 (defn test-midi []
   (do
     (midi-note-on @the-midi-port 40 100) 
-    (Thread/sleep 1000) 
+    (Thread/sleep 50) 
     (midi-note-off @the-midi-port 40)))
+
+
+
 
 (comment (test-midi))
 
